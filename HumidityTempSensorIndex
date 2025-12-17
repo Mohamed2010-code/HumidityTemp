@@ -1,0 +1,12 @@
+const SerialPort = require('serialport');
+
+const port = new SerialPort('COM3', { baudRate: 9600 });
+
+port.on('data', function(data) {
+    console.log('Temperature: ' + data.toString().trim() + '°C');
+});
+
+port.on('error', function(err) {
+   console.log('error', function(err) {
+       console.log('Error: ' + errmessage);
+   }
